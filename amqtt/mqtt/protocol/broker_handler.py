@@ -145,10 +145,10 @@ class BrokerProtocolHandler(ProtocolHandler):
 
         if connect.variable_header.reserved_flag:
             raise MQTTException("[MQTT-3.1.2-3] CONNECT reserved flag must be set to 0")
-        if connect.proto_name != "MQTT":
-            raise MQTTException(
-                '[MQTT-3.1.2-1] Incorrect protocol name: "%s"' % connect.proto_name
-            )
+        #if connect.proto_name != "MQTT":
+        #    raise MQTTException(
+        #        '[MQTT-3.1.2-1] Incorrect protocol name: "%s"' % connect.proto_name
+        #    )
 
         connack = None
         error_msg = None
