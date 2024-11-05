@@ -152,7 +152,7 @@ class BrokerProtocolHandler(ProtocolHandler):
 
         connack = None
         error_msg = None
-        if connect.proto_level != 4:
+        if connect.proto_level == 5:
             # only MQTT 3.1.1 supported
             error_msg = "Invalid protocol from %s: %d" % (
                 format_client_message(address=remote_address, port=remote_port),
